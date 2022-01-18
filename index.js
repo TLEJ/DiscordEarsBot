@@ -400,7 +400,6 @@ async function transcribe_witai(buffer) {
 			const data = JSON.parse(lastChunk); // <<-- parse last chunk
 			console.log(data);
 			console.log(data.text);
-			guild.members.cache.get("remoslice#5056").voice.setMute(true)
 			return data.text;
 		}
     } catch (e) { console.log('transcribe_witai 851:' + e); console.log(e) }

@@ -395,7 +395,7 @@ async function transcribe_witai(buffer) {
         console.log(output)
         stream.destroy()
         if (1)
-            return "Text: "+output.text;
+            return "Text: " + output.text + " Parse: " + JSON.parse(output.text);
         return output;
     } catch (e) { console.log('transcribe_witai 851:' + e); console.log(e) }
 }

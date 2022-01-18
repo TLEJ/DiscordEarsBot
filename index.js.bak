@@ -398,7 +398,9 @@ async function transcribe_witai(buffer) {
 			chunks = output.split('\r\n'); // <<-- Split into chunks array
 			const lastChunk = chunks.pop(); // <<-- get the last chunk
 			const data = JSON.parse(lastChunk); // <<-- parse last chunk
+			console.log(data);
 			console.log(data.text);
+			return data.text;
 		}
     } catch (e) { console.log('transcribe_witai 851:' + e); console.log(e) }
 }

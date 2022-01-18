@@ -393,6 +393,7 @@ async function transcribe_witai(buffer) {
         const output = await extractSpeechIntent(WITAI_TOK, stream, contenttype)
         witAI_lastcallTS = Math.floor(new Date());
         console.log(output)
+		return output.text;
         stream.destroy()
         if (1)
             return output;

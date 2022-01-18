@@ -394,7 +394,7 @@ async function transcribe_witai(buffer) {
         witAI_lastcallTS = Math.floor(new Date());
         console.log(output)
         stream.destroy()
-        if (output && 'text' in output && output.text.length)
+        if (output)
             return output.text
         return output;
     } catch (e) { console.log('transcribe_witai 851:' + e); console.log(e) }
